@@ -1,3 +1,4 @@
+from postoffice import PostOffice
 from letter import Letter
 class Person:
     def __init__(self, name, letterbox):
@@ -12,7 +13,9 @@ class Person:
             # Creates a new instance of the letter class
             new_letter = Letter(self, recipient, message)
             # Places the letter in the recipient's letterbox
-            recipient.letterbox.receive_letter(new_letter)
+            # recipient.letterbox.receive_letter(new_letter)
+            # Deposit letter in the Post Office
+            PostOffice().deposit_letter(new_letter)
             # Sets waiting status to True
             self.waiting = True
 
