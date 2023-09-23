@@ -13,10 +13,6 @@ class Letterbox:
     # Defines a function to remove the letter from the letterbox
     def remove_letter(self, letter):
         # Sets the flag to False
-        letter = self.letter
-        # Decrypts the message
-        letter.decrypt_message()
-        # Sets the letter inside to False
         self.letter_inside = False
         # Returns the letter
         return letter
