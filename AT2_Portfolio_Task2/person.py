@@ -18,18 +18,15 @@ class Person:
             # Sets waiting status to True
             self.waiting = True
 
-        # Function to receive letter
+    # Function to receive letter
     def receive_letter(self, letter):
         # Appends the letter to a list
         self.received_letters.append(letter)
         # Prints out the letter to the console
         print(f"Dear {self.name}, \n {letter.message} \n From {letter.sender.name}")
-        # Removes the letter from the list
-        self.received_letters.remove(letter)
         # Sets waiting to False (Can reply to message now)
         self.waiting = False
 
-    # Function to check person's letterbox
     def check_letterbox(self):
         # If there is a letter inside the letterbox do the following. If not, do nothing.
         if self.letterbox.letter_inside:
