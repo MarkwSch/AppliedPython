@@ -14,8 +14,6 @@ class Letterbox:
     def remove_letter(self, letter):
         # Sets the flag to False
         letter = self.letter
-        # Decrypts the message
-        letter.decrypt_message()
         # Sets the letter inside to False
         self.letter_inside = False
         # Returns the letter
